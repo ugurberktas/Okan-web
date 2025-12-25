@@ -1,1 +1,140 @@
-<h1>Okan Mobilya - Cok Yakinda Buradayiz</h1>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BERKTAŞ Seramik | Fayans ve Zemin Ustası | Malatya</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Malatya fayans ustası. Profesyonel zemin, banyo ve mutfak fayans uygulamaları. Usta işçilik, temiz teslimat ve ücretsiz keşif. Hemen WhatsApp ile iletişime geçin!">
+  <meta name="keywords" content="Malatya Fayans, Fayans ustası, Seramik döşeme, Banyo tadilat, Zemin kaplama, Fayans ustası Malatya, Tezgah arkası seramik">
+
+  <!-- Open Graph (WhatsApp & Facebook önizleme için) -->
+  <meta property="og:title" content="BERKTAŞ Seramik | Malatya Fayans Ustası">
+  <meta property="og:description" content="Profesyonel ve uzun ömürlü seramik uygulamaları. Ücretsiz keşif için hemen arayın!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1582582621959-48a87fb5f39e?w=1200">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="#home" class="brand">BERKTAŞ Seramik</a>
+    <nav class="nav">
+      <a href="#home" class="nav-link">Anasayfa</a>
+      <a href="#gallery" class="nav-link">Galeri</a>
+      <a href="#about" class="nav-link">Hakkında</a>
+      <a href="#contact" class="nav-link">İletişim</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Menüyü Aç/Kapa" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp-float" href="https://wa.me/905443203441" target="_blank" aria-label="WhatsApp ile iletişim">
+  💬
+</a>
+
+<main id="home">
+  <section class="hero" aria-label="Giriş">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Kaliteyi Zemine Yansıtıyoruz</h1>
+      <p class="hero-subtitle">Malatya ve çevre illerde uzun ömürlü seramik uygulamaları</p>
+      <a href="#contact" class="btn btn-primary">Ücretsiz Keşif</a>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <h2 class="section-title">Galeri</h2>
+      <p class="section-lead">Banyo, mutfak ve zemin uygulamalarından örnekler</p>
+      <div class="slider">
+        <div class="slides">
+          <img class="slide is-active" src="https://images.unsplash.com/photo-1582582621959-48a87fb5f39e?w=1600" alt="Modern banyo seramik uygulaması" />
+          <img class="slide" src="https://images.unsplash.com/photo-1615876234886-fd9a38f3a7b5?w=1600" alt="Mutfak fayans uygulaması" />
+          <img class="slide" src="https://images.unsplash.com/photo-1579983926774-196e7f7a2bde?w=1600" alt="Mermer zemin kaplama" />
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#10094;</button>
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkında -->
+  <section id="about" class="section about-section">
+    <div class="container about-grid">
+      <div class="about-card">
+        <h3>Profesyonel Ustalık</h3>
+        <p>Temiz derzler, doğru hizalama, su yalıtımına uygun uzun ömürlü uygulamalar.</p>
+      </div>
+      <div class="about-card">
+        <h3>Deneyimli Ekip</h3>
+        <p>10+ yıllık tecrübe ve yüzlerce başarılı proje referansı.</p>
+      </div>
+      <div class="about-card">
+        <h3>Hızlı Teslimat</h3>
+        <p>Randevuya uygun, zamanında teslim garantisi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2 class="section-title">İletişim</h2>
+        <p class="section-lead">Hemen arayın, 1 iş günü içinde keşif yapalım.</p>
+
+        <form class="contact-form" action="https://formspree.io/f/your-real-id" method="POST">
+          <div class="form-row">
+            <label for="name">İsim</label>
+            <input id="name" name="name" type="text" placeholder="Adınız" required />
+          </div>
+          <div class="form-row">
+            <label for="email">E-posta</label>
+            <input id="email" name="email" type="email" placeholder="ornek@eposta.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Mesaj</label>
+            <textarea id="message" name="message" rows="5" placeholder="Projeniz hakkında bilgi verin" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Gönder</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Telefon</h3>
+        <p><a href="tel:+905443203441">+90 544 320 34</a></p>
+
+        <h3>Konum</h3>
+        <p>Malatya ve çevre iller</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> BERKTAŞ Seramik — Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
