@@ -4,24 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berktaş Seramik | Fayans ve Seramik Ustası</title>
-  <!-- Bootstrap 5 CSS CDN (Latest) -->
+  <title>Berktaş Seramik | Malatya Fayans ve Seramik Ustası</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <style>
-    /* KURUMSAL RENKLER VE GENEL AYARLAR */
+    /* --- KURUMSAL RENKLER VE TEMEL AYARLAR --- */
     :root {
-      --primary-color: #003366;
-      /* Koyu Lacivert */
-      --white-overlay: rgba(255, 255, 255, 0.35);
-      /* %35 Beyaz Tül - MAKSİMUM PARLAKLIK */
+      --primary-color: #0d2642; /* İstenen koyu lacivert */
       --light-bg: #f8f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -30,146 +28,144 @@
       overflow-x: hidden;
     }
 
-    h1,
-    h2,
-    h3,
-    .navbar-brand {
-      font-family: 'Playfair Display', serif;
+    h1, h2, h3 {
+      font-family: 'Inter', sans-serif;
       color: var(--primary-color);
+      font-weight: 700;
     }
 
-    /* NAVBAR */
+    /* --- NAVBAR (ÜST MENÜ) --- */
     .navbar {
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 1rem 0;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.98) !important;
       backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 15px 0;
     }
 
     .navbar-brand {
       font-weight: 700;
       font-size: 1.5rem;
-      letter-spacing: 1px;
+      color: var(--primary-color) !important;
     }
 
     .nav-link {
-      font-weight: 600;
-      color: #333 !important;
-      margin-left: 15px;
+      font-weight: 500;
+      color: #555 !important;
+      margin-left: 25px;
+      font-size: 0.95rem;
       transition: color 0.3s;
-      text-transform: uppercase;
-      font-size: 0.9rem;
     }
 
     .nav-link:hover {
       color: var(--primary-color) !important;
     }
 
-    /* HERO BÖLÜMÜ - REVİZYONLU */
+    /* --- FERAH HERO BÖLÜMÜ (BUZLU CAM EFEKTİ) --- */
     .hero-section {
       position: relative;
       height: 100vh;
-      min-height: 600px;
-      /* Yeni Aydınlık Görsel */
-      background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1920');
+      min-height: 650px;
+      margin-top: 0;
+      
+      /* Kusursuz, güzel görünen fayans detay fotoğrafı */
+      background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=2000');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      margin-top: 76px;
-      /* Navbar payı */
     }
 
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--white-overlay);
-      /* %35 Opaklık */
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.7);
-      /* Hafif kutu efekti okunurluk için */
+    /* ÖNEMLİ: Çok Saydam Buzlu Cam Kutusu */
+    .hero-content-box {
+      background: rgba(255, 255, 255, 0.25); /* Alpha 0.25 = %25 opaklık, çok saydam! */
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      padding: 60px 50px;
       border-radius: 20px;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      max-width: 750px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .hero-title {
-      font-size: 4rem;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
       margin-bottom: 20px;
-      font-weight: 800;
-      line-height: 1.1;
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      color: var(--primary-color);
+      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Okunabilirlik için beyaz gölge */
     }
 
-    .btn-custom-primary {
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #2c3e50;
+      margin-bottom: 35px;
+      font-weight: 400;
+      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+    }
+
+    /* Butonlar */
+    .btn-hero-primary {
       background-color: var(--primary-color);
       color: white;
-      padding: 15px 40px;
-      font-weight: 700;
+      padding: 14px 40px;
       border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
       transition: all 0.3s;
       border: 2px solid var(--primary-color);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      display: inline-block;
     }
 
-    .btn-custom-primary:hover {
+    .btn-hero-primary:hover {
+      background-color: #1a3a5c;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(13, 38, 66, 0.3);
+    }
+
+    .btn-hero-secondary {
       background-color: transparent;
       color: var(--primary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
-    }
-
-    .btn-custom-secondary {
-      background-color: white;
-      color: var(--primary-color);
-      padding: 15px 40px;
-      font-weight: 700;
+      padding: 14px 40px;
       border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid var(--primary-color);
+      margin-left: 15px;
       transition: all 0.3s;
-      border: 2px solid white;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: inline-block;
     }
 
-    .btn-custom-secondary:hover {
-      background-color: #f0f0f0;
+    .btn-hero-secondary:hover {
+      background-color: var(--primary-color);
+      color: white;
       transform: translateY(-3px);
     }
 
-    /* SERVİSLER */
-    .section-padding {
-      padding: 100px 0;
+    /* --- HİZMET KUTULARI --- */
+    .section-padding { 
+      padding: 90px 0; 
     }
-
+    
     .service-card {
-      border: none;
-      background: #fff;
+      background: white;
       padding: 40px 30px;
+      border-radius: 15px;
       text-align: center;
-      transition: all 0.4s ease;
+      transition: all 0.3s;
       height: 100%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e8e8e8;
     }
 
     .service-card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(13, 38, 66, 0.1);
+      border-color: var(--primary-color);
     }
 
     .service-icon {
@@ -178,131 +174,257 @@
       margin-bottom: 20px;
     }
 
-    /* CAROUSEL GALERİ */
-    .carousel-item {
-      height: 500px;
-      background-color: #000;
+    .service-card h4 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
     }
 
-    .carousel-item img {
+    /* --- NEDEN BİZ BÖLÜMÜ --- */
+    .why-us-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+      color: white;
+    }
+
+    .why-us-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 30px 25px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .why-us-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .why-us-icon {
+      font-size: 3rem;
+      color: #25D366;
+      margin-bottom: 15px;
+    }
+
+    .why-us-card h5 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .why-us-card p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* --- HİZMET ALANLARI BÖLÜMÜ --- */
+    .service-areas {
+      background-color: var(--light-bg);
+    }
+
+    .area-badge {
+      display: inline-block;
+      background: white;
+      color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 8px;
+      font-weight: 500;
+      border: 2px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+
+    .area-badge:hover {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+      transform: scale(1.05);
+    }
+
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      height: 400px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* --- GALERİ (Fayans/İşçilik Odaklı, Çalışan Linkler) --- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 350px;
+    }
+
+    .gallery-item img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.9;
+      transition: transform 0.4s;
     }
 
-    .carousel-caption {
-      background: rgba(0, 51, 102, 0.7);
-      border-radius: 10px;
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(13, 38, 66, 0.85), transparent);
+      color: white;
       padding: 20px;
-      bottom: 40px;
-    }
-
-    /* CANLI İLETİŞİM ALANI */
-    .contact-box {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      height: 100%;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transform: translateY(100%);
       transition: transform 0.3s;
-      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .contact-box:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary-color);
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
     }
 
-    .contact-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--light-bg);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 2rem;
-      color: var(--primary-color);
+    /* --- İLETİŞİM/CTA ALANI (HARİTA YOK!) --- */
+    #contact {
+      background: linear-gradient(135deg, #0d2642 0%, #1a3a5c 100%);
+      padding: 80px 0;
     }
 
-    .contact-box.whatsapp .contact-icon {
-      color: #25D366;
-      background: #e6fcf0;
+    #contact h3 {
+      color: white;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
     }
 
-    .contact-box a {
+    #contact p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+    }
+
+    .cta-button {
+      padding: 18px 50px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
       text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: 2px solid transparent;
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #001a33;
-      color: #fff;
-      padding: 60px 0 20px;
-      font-size: 0.95rem;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 70px;
-      height: 70px;
+    .btn-whatsapp {
       background-color: #25D366;
       color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1da851;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-call {
+      background-color: var(--primary-color);
+      color: white;
+      border-color: white;
+    }
+
+    .btn-call:hover {
+      background-color: white;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Footer Alt Kısım */
+    .footer-bottom {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      color: white;
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      z-index: 1050;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      text-decoration: none;
       transition: all 0.3s;
-      animation: pulse 2s infinite;
     }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
+    
+    .whatsapp-float:hover { 
+      transform: scale(1.12); 
       color: white;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
     }
 
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-
-      70% {
-        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-
-    /* RESPONSIVE */
+    /* Mobil Uyumluluk */
     @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .hero-content-box { 
+        padding: 40px 25px; 
+        width: 92%; 
+        margin: 0 15px;
       }
-
-      .hero-section {
-        min-height: 500px;
+      .btn-hero-secondary { 
+        margin-left: 0; 
+        margin-top: 15px; 
+        display: block; 
+        width: 100%; 
       }
-
-      .carousel-item {
-        height: 350px;
+      .btn-hero-primary { 
+        display: block; 
+        width: 100%; 
       }
-
-      .btn-custom-primary,
-      .btn-custom-secondary {
-        padding: 12px 30px;
-        font-size: 0.9rem;
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-item {
+        height: 280px;
+      }
+      .cta-button {
+        display: block;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+      }
+      #contact h3 {
+        font-size: 1.8rem;
+      }
+      .map-container {
+        height: 300px;
+        margin-top: 30px;
+      }
+      .area-badge {
+        font-size: 0.85rem;
+        padding: 8px 15px;
       }
     }
   </style>
@@ -314,224 +436,262 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <i class="bi bi-layers-fill me-2"></i>BERKTAŞ SERAMİK
+        <i class="bi bi-bricks me-2"></i>BERKTAŞ SERAMİK
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#home">Anasayfa</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Projeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Referanslar</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO BÖLÜMÜ (Saydam Buzlu Cam Efektli) -->
   <section id="home" class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">Evinize Ferahlık,<br>Zemine Kalite Katıyoruz</h1>
-      <p class="lead mb-5 fw-bold" style="color: #444;">Malatya ve çevresinde profesyonel fayans ve seramik çözümleri.
-      </p>
-      <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-        <a href="#contact" class="btn btn-custom-secondary">Keşif İste</a>
-        <a href="tel:+905397652896" class="btn btn-custom-primary">
-          <i class="bi bi-telephone-fill me-2"></i>HEMEN ARA USTA
+    <div class="hero-content-box">
+      <h1 class="hero-title">Evinizin Havasını<br>Değiştiren Ustalık</h1>
+      <p class="hero-subtitle">Malatya ve çevresinde profesyonel fayans, seramik ve granit döşeme hizmetleri. Temiz işçilik, ferah mekanlar.</p>
+      
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <a href="#gallery" class="btn-hero-primary">
+          <i class="bi bi-images me-2"></i>Projeleri İnceleyin
+        </a>
+        <a href="#contact" class="btn-hero-secondary">
+          <i class="bi bi-chat-dots me-2"></i>Ücretsiz Teklif Alın
         </a>
       </div>
     </div>
   </section>
 
   <!-- HİZMETLER -->
-  <section id="services" class="section-padding bg-light">
+  <section id="services" class="section-padding" style="background-color: var(--light-bg);">
     <div class="container">
-      <div class="section-title text-center mb-5">
-        <h2 class="display-5 fw-bold">Neler Yapıyoruz?</h2>
-        <div style="width: 80px; height: 4px; background: var(--primary-color); margin: 20px auto;"></div>
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Neler Yapıyoruz?</h2>
+        <p class="text-muted">Anahtar teslim tadilat ve döşeme çözümleri</p>
       </div>
+      
       <div class="row g-4">
         <div class="col-md-4">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-droplet-fill"></i></div>
-            <h3>Banyo Yenileme</h3>
-            <p class="text-muted">Kırım, tesisat ve yeniden döşeme ile banyonuzu otel konforunda bir alana
-              dönüştürüyoruz.</p>
+            <h4>Banyo Yenileme</h4>
+            <p class="text-muted">Eski fayans kırımından, su yalıtımına ve son kat seramiğe kadar anahtar teslim banyo tadilatı.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-card">
-            <div class="service-icon"><i class="bi bi-ui-checks-grid"></i></div>
-            <h3>Mutfak Tezgâh Arası</h3>
-            <p class="text-muted">En yeni model seramik ve fayanslarla mutfağınıza şıklık ve hijyen katıyoruz.</p>
+            <div class="service-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+            <h4>Mutfak Seramikleri</h4>
+            <p class="text-muted">Tezgah arası modern fayanslar ve zemin için leke tutmayan granit uygulamaları.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-house-door-fill"></i></div>
-            <h3>Zemin Kaplama</h3>
-            <p class="text-muted">Koridor, balkon ve salonlarınız için uzun ömürlü ve gösterişli zemin çözümleri.</p>
+            <h4>Teras ve Balkon</h4>
+            <p class="text-muted">Dış mekanlar için kaymaz, dona ve güneşe dayanıklı seramik döşeme işçiliği.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALERİ (CAROUSEL) -->
+  <!-- NEDEN BİZ? BÖLÜMÜ -->
+  <section class="why-us-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-white">Neden Berktaş Seramik?</h2>
+        <p class="text-white-50">Güvenilir, deneyimli ve kaliteli hizmet</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="why-us-card">
+            <div class="why-us-icon"><i class="bi bi-award-fill"></i></div>
+            <h5>15+ Yıllık Deneyim</h5>
+            <p>Uzman kadromuzla kusursuz işçilik</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="why-us-card">
+            <div class="why-us-icon"><i class="bi bi-shield-check"></i></div>
+            <h5>Temiz İşçilik Garantisi</h5>
+            <p>İşimizin arkasında duruyoruz</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="why-us-card">
+            <div class="why-us-icon"><i class="bi bi-cash-coin"></i></div>
+            <h5>Ücretsiz Keşif</h5>
+            <p>Yerinde ölçüm ve danışmanlık</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="why-us-card">
+            <div class="why-us-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <h5>Yerel Hizmet</h5>
+            <p>Malatya'da hızlı ve güvenilir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERİ (Fayans/İşçilik Odaklı, Çalışan Unsplash Linkleri) -->
   <section id="gallery" class="section-padding">
     <div class="container">
-      <div class="section-title text-center mb-5">
-        <h2 class="display-5 fw-bold">Projelerimiz</h2>
-        <p class="text-muted">Tamamladığımız işlerden bazı kareler.</p>
-      </div>
+      <h2 class="text-center mb-3 fw-bold">Yaptığımız İşler</h2>
+      <p class="text-center text-muted mb-5">İşçiliğimizin detaylarına yakından bakın.</p>
 
-      <div id="projectCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"
-            aria-current="true"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
-          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"></button>
-        </div>
-        <div class="carousel-inner">
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <!-- Buraya Resim Gelecek 1 -->
-            <img src="https://via.placeholder.com/1200x600/eee/003366?text=Banyo+Yenileme+Projesi" class="d-block w-100"
-              alt="Proje 1">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Özel Banyo Tasarımı</h5>
-              <p>Kullanışlı ve ferah alanlar.</p>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <!-- Buraya Resim Gelecek 2 -->
-            <img src="https://via.placeholder.com/1200x600/eee/003366?text=Mutfak+Tezgah+Arası" class="d-block w-100"
-              alt="Proje 2">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Mutfak Detayları</h5>
-              <p>Hijyenik ve şık yüzeyler.</p>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <!-- Buraya Resim Gelecek 3 -->
-            <img src="https://via.placeholder.com/1200x600/eee/003366?text=Zemin+Seramik" class="d-block w-100"
-              alt="Proje 3">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Salon Zemin Kaplama</h5>
-              <p>Dayanıklı ve parlak görünüm.</p>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="carousel-item">
-            <!-- Buraya Resim Gelecek 4 -->
-            <img src="https://via.placeholder.com/1200x600/eee/003366?text=Balkon+Uygulaması" class="d-block w-100"
-              alt="Proje 4">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Balkon ve Teras</h5>
-              <p>Dış mekana uygun çözümler.</p>
-            </div>
-          </div>
-          <!-- Slide 5 -->
-          <div class="carousel-item">
-            <!-- Buraya Resim Gelecek 5 -->
-            <img src="https://via.placeholder.com/1200x600/eee/003366?text=Koridor+Döşeme" class="d-block w-100"
-              alt="Proje 5">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Koridor Döşeme</h5>
-              <p>Evinizin girişine değer katın.</p>
-            </div>
+      <div class="gallery-grid">
+        <!-- Görsel 1: Beyaz ferah banyo seramikleri -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=700&fit=crop&q=80" alt="Beyaz Banyo Seramikleri">
+          <div class="gallery-overlay">
+            <h5>Ferah Banyo Tasarımı</h5>
+            <p>Beyaz seramik ile aydınlık mekanlar</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Geri</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">İleri</span>
-        </button>
-      </div>
-    </div>
-  </section>
 
-  <!-- LIVE CONTACT SECTION (YENİ) -->
-  <section id="contact" class="section-padding" style="background-color: #f0f4f8;">
-    <div class="container">
-      <div class="section-title text-center mb-5">
-        <h2 class="display-6 fw-bold">Bizimle İletişime Geçin</h2>
-      </div>
-      <div class="row g-4">
-        <!-- TELEFON -->
-        <div class="col-md-4">
-          <div class="contact-box">
-            <div class="contact-icon"><i class="bi bi-telephone-inbound-fill"></i></div>
-            <h4>Hemen Arayın</h4>
-            <p class="text-muted mb-3">7/24 Ulaşabilirsiniz</p>
-            <a href="tel:+905397652896" class="btn btn-outline-primary rounded-pill px-4">
-              +90 539 765 28 96
-            </a>
+        <!-- Görsel 2: Modern metro fayans mutfak -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=700&fit=crop&q=80" alt="Metro Fayans Mutfak">
+          <div class="gallery-overlay">
+            <h5>Metro Fayans Uygulaması</h5>
+            <p>Modern mutfak tezgah arası</p>
           </div>
         </div>
-        <!-- WHATSAPP -->
-        <div class="col-md-4">
-          <div class="contact-box whatsapp">
-            <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
-            <h4>WhatsApp Hattı</h4>
-            <p class="text-muted mb-3">Mesajınızı Bırakın</p>
-            <a href="https://wa.me/905397652896" target="_blank" class="btn btn-success rounded-pill px-4">
-              Sohbeti Başlat
-            </a>
+
+        <!-- Görsel 3: Mermer görünümlü zemin -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=700&fit=crop&q=80" alt="Mermer Zemin Seramik">
+          <div class="gallery-overlay">
+            <h5>Mermer Efektli Zemin</h5>
+            <p>Şık ve kusursuz döşeme işçiliği</p>
           </div>
         </div>
-        <!-- ADRES -->
-        <div class="col-md-4">
-          <div class="contact-box">
-            <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
-            <h4>Hizmet Bölgesi</h4>
-            <p class="text-muted mb-3">Malatya Merkez ve İlçeleri</p>
-            <a href="https://maps.google.com/?q=Malatya" target="_blank" class="btn btn-outline-dark rounded-pill px-4">
-              Haritada Gör
-            </a>
+
+        <!-- Görsel 4: Beyaz fayans duvar -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=800&h=700&fit=crop&q=80" alt="Beyaz Fayans Duvar">
+          <div class="gallery-overlay">
+            <h5>Klasik Beyaz Fayans</h5>
+            <p>Temiz ve ferah duvar kaplaması</p>
+          </div>
+        </div>
+
+        <!-- Görsel 5: Gri ton modern seramik -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=700&fit=crop&q=80" alt="Modern Gri Seramik">
+          <div class="gallery-overlay">
+            <h5>Modern Gri Tonlar</h5>
+            <p>Çağdaş ve şık seramik döşeme</p>
+          </div>
+        </div>
+
+        <!-- Görsel 6: Ahşap görünümlü seramik -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=800&h=700" alt="Ahşap Desenli Seramik">
+          <div class="gallery-overlay">
+            <h5>Ahşap Desenli Seramik</h5>
+            <p>Doğal ve sıcak görünüm</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- HİZMET ALANLARI BÖLÜMÜ -->
+  <section class="service-areas section-padding">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          <h4 class="fw-bold text-white mb-2">BERKTAŞ SERAMİK</h4>
-          <small class="text-white-50">Evinizin değerine değer katıyoruz.</small>
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Hizmet Verdiğimiz Bölgeler</h2>
+        <p class="text-muted">Malatya ve çevre illerde profesyonel fayans hizmeti</p>
+      </div>
+
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="text-center mb-4">
+            <span class="area-badge">Merkez</span>
+            <span class="area-badge">Battalgazi</span>
+            <span class="area-badge">Yeşilyurt</span>
+            <span class="area-badge">Akçadağ</span>
+            <span class="area-badge">Arapgir</span>
+            <span class="area-badge">Arguvan</span>
+            <span class="area-badge">Darende</span>
+            <span class="area-badge">Doğanşehir</span>
+            <span class="area-badge">Doğanyol</span>
+            <span class="area-badge">Hekimhan</span>
+            <span class="area-badge">Kale</span>
+            <span class="area-badge">Kuluncak</span>
+            <span class="area-badge">Pütürge</span>
+            <span class="area-badge">Yazıhan</span>
+          </div>
+          <div class="alert alert-info border-0 shadow-sm">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Çevre İller:</strong> Elazığ, Adıyaman, Kahramanmaraş bölgelerine de hizmet veriyoruz.
+          </div>
         </div>
-        <div class="col-md-6 text-center text-md-end">
-          <p class="mb-0 text-white-50">&copy; <span id="year"></span> Tüm Hakları Saklıdır.</p>
+
+        <div class="col-lg-6">
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197293.4707534332!2d38.20089577812499!3d38.35518399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407637d977e6bb2b%3A0x8c3622ce1456f8c!2sMalatya!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- WHATSAPP FLOAT BTN -->
-  <a href="https://wa.me/905397652896" class="whatsapp-float" target="_blank" title="WhatsApp ile Yazın">
+  <!-- İLETİŞİM/CTA (Harita Yok, Sadece 2 Büyük Buton) -->
+  <section id="contact">
+    <div class="container text-center">
+      <h3>Ücretsiz Keşif İçin İletişime Geçin</h3>
+      <p class="mb-5">Malatya'nın her yerine hizmet veriyoruz. Fiyat almak için çekinmeden arayın.</p>
+      
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-5 col-md-6">
+          <a href="https://wa.me/905397652896?text=Merhaba,%20fayans%20işi%20için%20bilgi%20almak%20istiyorum" 
+             target="_blank" 
+             class="cta-button btn-whatsapp w-100">
+            <i class="bi bi-whatsapp me-2"></i>WhatsApp'tan Yaz
+          </a>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <a href="tel:+905397652896" class="cta-button btn-call w-100">
+            <i class="bi bi-telephone-fill me-2"></i>Hemen Ara
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0" style="color: rgba(255,255,255,0.7);">
+          © <span id="year"></span> Berktaş Seramik. Tüm hakları saklıdır.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/905397652896" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Auto Year Script -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-</body>
 
+</body>
 </html>
