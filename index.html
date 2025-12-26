@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berktaş Seramik | Malatya Fayans ve Seramik Ustası</title>
+  <title>Berktaş Yapı & Dekorasyon | Malatya Anahtar Teslim Tadilat</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -12,7 +12,7 @@
   <style>
     /* --- KURUMSAL RENKLER VE TEMEL AYARLAR --- */
     :root {
-      --primary-color: #0d2642; /* İstenen koyu lacivert */
+      --primary-color: #003366; /* Kurumsal lacivert */
       --light-bg: #f8f9fa;
     }
 
@@ -44,7 +44,7 @@
 
     .navbar-brand {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--primary-color) !important;
     }
 
@@ -60,15 +60,15 @@
       color: var(--primary-color) !important;
     }
 
-    /* --- FERAH HERO BÖLÜMÜ (BUZLU CAM EFEKTİ) --- */
+    /* --- FERAH HERO BÖLÜMÜ (Modern Salon Görseli) --- */
     .hero-section {
       position: relative;
       height: 100vh;
       min-height: 650px;
       margin-top: 0;
       
-      /* Kusursuz, güzel görünen fayans detay fotoğrafı */
-      background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=2000');
+      /* Lüks, bitmiş salon görseli */
+      background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -78,9 +78,9 @@
       justify-content: center;
     }
 
-    /* ÖNEMLİ: Çok Saydam Buzlu Cam Kutusu */
+    /* ÖNEMLİ: Saydam Buzlu Cam Kutusu */
     .hero-content-box {
-      background: rgba(255, 255, 255, 0.25); /* Alpha 0.25 = %25 opaklık, çok saydam! */
+      background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(12px) saturate(180%);
       -webkit-backdrop-filter: blur(12px) saturate(180%);
       padding: 60px 50px;
@@ -97,7 +97,7 @@
       line-height: 1.2;
       margin-bottom: 20px;
       color: var(--primary-color);
-      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Okunabilirlik için beyaz gölge */
+      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
     }
 
     .hero-subtitle {
@@ -122,10 +122,10 @@
     }
 
     .btn-hero-primary:hover {
-      background-color: #1a3a5c;
+      background-color: #004d99;
       color: white;
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(13, 38, 66, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3);
     }
 
     .btn-hero-secondary {
@@ -147,7 +147,7 @@
       transform: translateY(-3px);
     }
 
-    /* --- HİZMET KUTULARI --- */
+    /* --- HİZMET KUTULARI (4 Kart) --- */
     .section-padding { 
       padding: 90px 0; 
     }
@@ -164,7 +164,7 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(13, 38, 66, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 51, 102, 0.1);
       border-color: var(--primary-color);
     }
 
@@ -181,7 +181,7 @@
 
     /* --- NEDEN BİZ BÖLÜMÜ --- */
     .why-us-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, #004d99 100%);
       color: white;
     }
 
@@ -256,7 +256,7 @@
       border: 0;
     }
 
-    /* --- GALERİ (Fayans/İşçilik Odaklı, Çalışan Linkler) --- */
+    /* --- GALERİ (Çeşitli Mekanlar) --- */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -288,7 +288,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(13, 38, 66, 0.85), transparent);
+      background: linear-gradient(to top, rgba(0, 51, 102, 0.85), transparent);
       color: white;
       padding: 20px;
       transform: translateY(100%);
@@ -299,9 +299,9 @@
       transform: translateY(0);
     }
 
-    /* --- İLETİŞİM/CTA ALANI (HARİTA YOK!) --- */
+    /* --- İLETİŞİM/CTA ALANI --- */
     #contact {
-      background: linear-gradient(135deg, #0d2642 0%, #1a3a5c 100%);
+      background: linear-gradient(135deg, #003366 0%, #004d99 100%);
       padding: 80px 0;
     }
 
@@ -436,7 +436,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <i class="bi bi-bricks me-2"></i>BERKTAŞ SERAMİK
+        <i class="bi bi-house-fill me-2"></i>BERKTAŞ YAPI & DEKORASYON
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -445,58 +445,65 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#home">Anasayfa</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Referanslar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Projeler</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO BÖLÜMÜ (Saydam Buzlu Cam Efektli) -->
+  <!-- HERO BÖLÜMÜ (Lüks Salon Görseli) -->
   <section id="home" class="hero-section">
     <div class="hero-content-box">
-      <h1 class="hero-title">Evinizin Havasını<br>Değiştiren Ustalık</h1>
-      <p class="hero-subtitle">Malatya ve çevresinde profesyonel fayans, seramik ve granit döşeme hizmetleri. Temiz işçilik, ferah mekanlar.</p>
+      <h1 class="hero-title">Hayalinizdeki Evi<br>Baştan Yaratıyoruz</h1>
+      <p class="hero-subtitle">Boya, Parke, Seramik ve Alçıpan... Anahtar teslim tadilat ve dekorasyon çözümleri.</p>
       
       <div class="d-flex flex-wrap justify-content-center gap-2">
-        <a href="#gallery" class="btn-hero-primary">
-          <i class="bi bi-images me-2"></i>Projeleri İnceleyin
+        <a href="#contact" class="btn-hero-primary">
+          <i class="bi bi-calculator me-2"></i>Ücretsiz Keşif Al
         </a>
-        <a href="#contact" class="btn-hero-secondary">
-          <i class="bi bi-chat-dots me-2"></i>Ücretsiz Teklif Alın
+        <a href="tel:+905397652896" class="btn-hero-secondary">
+          <i class="bi bi-telephone me-2"></i>Hemen Ara
         </a>
       </div>
     </div>
   </section>
 
-  <!-- HİZMETLER -->
+  <!-- HİZMETLER (4 Kart) -->
   <section id="services" class="section-padding" style="background-color: var(--light-bg);">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">Neler Yapıyoruz?</h2>
-        <p class="text-muted">Anahtar teslim tadilat ve döşeme çözümleri</p>
+        <p class="text-muted">Evinizin parkesinden boyasına, sıvasından fayansına kadar her şeyi tek elden yapıyoruz</p>
       </div>
       
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-lg-3 col-md-6">
           <div class="service-card">
-            <div class="service-icon"><i class="bi bi-droplet-fill"></i></div>
-            <h4>Banyo Yenileme</h4>
-            <p class="text-muted">Eski fayans kırımından, su yalıtımına ve son kat seramiğe kadar anahtar teslim banyo tadilatı.</p>
+            <div class="service-icon"><i class="bi bi-hammer"></i></div>
+            <h4>Komple Tadilat</h4>
+            <p class="text-muted">Anahtar teslim ev yenileme. Tüm işleri planlayıp, tertemiz teslim ediyoruz.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-3 col-md-6">
           <div class="service-card">
             <div class="service-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
-            <h4>Mutfak Seramikleri</h4>
-            <p class="text-muted">Tezgah arası modern fayanslar ve zemin için leke tutmayan granit uygulamaları.</p>
+            <h4>Seramik & Fayans</h4>
+            <p class="text-muted">Banyo, mutfak ve ıslak zemin seramik döşeme. Profesyonel işçilik garantisi.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-3 col-md-6">
           <div class="service-card">
-            <div class="service-icon"><i class="bi bi-house-door-fill"></i></div>
-            <h4>Teras ve Balkon</h4>
-            <p class="text-muted">Dış mekanlar için kaymaz, dona ve güneşe dayanıklı seramik döşeme işçiliği.</p>
+            <div class="service-icon"><i class="bi bi-paint-bucket"></i></div>
+            <h4>Boya & Sıva & Alçı</h4>
+            <p class="text-muted">Saten alçı, boya badana, duvar kağıdı. Evinize yeni bir soluk.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="service-icon"><i class="bi bi-circle-square"></i></div>
+            <h4>Zemin & Parke</h4>
+            <p class="text-muted">Laminat parke döşeme, süpürgelik montajı. Kusursuz son kat işçiliği.</p>
           </div>
         </div>
       </div>
@@ -507,8 +514,8 @@
   <section class="why-us-section section-padding">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="fw-bold text-white">Neden Berktaş Seramik?</h2>
-        <p class="text-white-50">Güvenilir, deneyimli ve kaliteli hizmet</p>
+        <h2 class="fw-bold text-white">Neden Berktaş Yapı & Dekorasyon?</h2>
+        <p class="text-white-50">Güvenilir, deneyimli ve anahtar teslim hizmet</p>
       </div>
       
       <div class="row g-4">
@@ -521,9 +528,9 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-shield-check"></i></div>
-            <h5>Temiz İşçilik Garantisi</h5>
-            <p>İşimizin arkasında duruyoruz</p>
+            <div class="why-us-icon"><i class="bi bi-house-check"></i></div>
+            <h5>Anahtar Teslim</h5>
+            <p>Tüm süreçleri biz yönetiyoruz</p>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -535,73 +542,73 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-geo-alt-fill"></i></div>
-            <h5>Yerel Hizmet</h5>
-            <p>Malatya'da hızlı ve güvenilir</p>
+            <div class="why-us-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+            <h5>Temiz Teslimat</h5>
+            <p>İşimizin arkasında duruyoruz</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALERİ (Fayans/İşçilik Odaklı, Çalışan Unsplash Linkleri) -->
+  <!-- GALERİ (Çeşitli Tamamlanmış Mekanlar) -->
   <section id="gallery" class="section-padding">
     <div class="container">
-      <h2 class="text-center mb-3 fw-bold">Yaptığımız İşler</h2>
-      <p class="text-center text-muted mb-5">İşçiliğimizin detaylarına yakından bakın.</p>
+      <h2 class="text-center mb-3 fw-bold">Tamamladığımız Projeler</h2>
+      <p class="text-center text-muted mb-5">Hayallerdeki evleri gerçeğe dönüştürüyoruz</p>
 
       <div class="gallery-grid">
-        <!-- Görsel 1: Beyaz ferah banyo seramikleri -->
+        <!-- Görsel 1: Modern Salon (Parke + Boya) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=700&fit=crop&q=80" alt="Beyaz Banyo Seramikleri">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=650&fit=crop&q=80" alt="Modern Salon Parke ve Boya">
           <div class="gallery-overlay">
-            <h5>Ferah Banyo Tasarımı</h5>
-            <p>Beyaz seramik ile aydınlık mekanlar</p>
+            <h5>Modern Salon Dekorasyonu</h5>
+            <p>Parke döşeme, boya ve aydınlatma</p>
           </div>
         </div>
 
-        <!-- Görsel 2: Modern metro fayans mutfak -->
+        <!-- Görsel 2: Lüks Banyo (Seramik) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=700&fit=crop&q=80" alt="Metro Fayans Mutfak">
+          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=650&fit=crop&q=80" alt="Lüks Banyo Seramik">
           <div class="gallery-overlay">
-            <h5>Metro Fayans Uygulaması</h5>
-            <p>Modern mutfak tezgah arası</p>
+            <h5>Lüks Banyo Yenileme</h5>
+            <p>Premium seramik ve modern tasarım</p>
           </div>
         </div>
 
-        <!-- Görsel 3: Mermer görünümlü zemin -->
+        <!-- Görsel 3: Koridor/Antre (Zemin + Boya Uyumu) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=700&fit=crop&q=80" alt="Mermer Zemin Seramik">
+          <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=650&fit=crop&q=80" alt="Koridor Zemin ve Boya">
           <div class="gallery-overlay">
-            <h5>Mermer Efektli Zemin</h5>
-            <p>Şık ve kusursuz döşeme işçiliği</p>
+            <h5>Şık Koridor Tasarımı</h5>
+            <p>Zemin ve duvar renk uyumu</p>
           </div>
         </div>
 
-        <!-- Görsel 4: Beyaz fayans duvar -->
+        <!-- Görsel 4: Yatak Odası (Parke + Boya) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=800&h=700&fit=crop&q=80" alt="Beyaz Fayans Duvar">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&h=650&fit=crop&q=80" alt="Yatak Odası Dekorasyon">
           <div class="gallery-overlay">
-            <h5>Klasik Beyaz Fayans</h5>
-            <p>Temiz ve ferah duvar kaplaması</p>
+            <h5>Huzurlu Yatak Odası</h5>
+            <p>Ahşap parke ve yumuşak tonlar</p>
           </div>
         </div>
 
-        <!-- Görsel 5: Gri ton modern seramik -->
+        <!-- Görsel 5: Mutfak (Metro Fayans) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=700&fit=crop&q=80" alt="Modern Gri Seramik">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=650&fit=crop&q=80" alt="Modern Mutfak Fayans">
           <div class="gallery-overlay">
-            <h5>Modern Gri Tonlar</h5>
-            <p>Çağdaş ve şık seramik döşeme</p>
+            <h5>Modern Mutfak Uygulaması</h5>
+            <p>Metro fayans ve granit zemin</p>
           </div>
         </div>
 
-        <!-- Görsel 6: Ahşap görünümlü seramik -->
+        <!-- Görsel 6: Oturma Odası (Komple Tadilat) -->
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&q=80&w=800&h=700" alt="Ahşap Desenli Seramik">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=650&fit=crop&q=80" alt="Oturma Odası Tadilat">
           <div class="gallery-overlay">
-            <h5>Ahşap Desenli Seramik</h5>
-            <p>Doğal ve sıcak görünüm</p>
+            <h5>Komple Oturma Odası</h5>
+            <p>Anahtar teslim dönüşüm projesi</p>
           </div>
         </div>
       </div>
@@ -613,7 +620,7 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold">Hizmet Verdiğimiz Bölgeler</h2>
-        <p class="text-muted">Malatya ve çevre illerde profesyonel fayans hizmeti</p>
+        <p class="text-muted">Malatya ve çevre illerde anahtar teslim tadilat hizmeti</p>
       </div>
 
       <div class="row align-items-center g-4">
@@ -654,15 +661,15 @@
     </div>
   </section>
 
-  <!-- İLETİŞİM/CTA (Harita Yok, Sadece 2 Büyük Buton) -->
+  <!-- İLETİŞİM/CTA -->
   <section id="contact">
     <div class="container text-center">
       <h3>Ücretsiz Keşif İçin İletişime Geçin</h3>
-      <p class="mb-5">Malatya'nın her yerine hizmet veriyoruz. Fiyat almak için çekinmeden arayın.</p>
+      <p class="mb-5">Malatya'nın her yerine hizmet veriyoruz. Evinizi yenilemek için çekinmeden arayın.</p>
       
       <div class="row justify-content-center g-4">
         <div class="col-lg-5 col-md-6">
-          <a href="https://wa.me/905397652896?text=Merhaba,%20fayans%20işi%20için%20bilgi%20almak%20istiyorum" 
+          <a href="https://wa.me/905397652896?text=Merhaba,%20ev%20tadilatı%20için%20bilgi%20almak%20istiyorum" 
              target="_blank" 
              class="cta-button btn-whatsapp w-100">
             <i class="bi bi-whatsapp me-2"></i>WhatsApp'tan Yaz
@@ -677,7 +684,7 @@
 
       <div class="footer-bottom">
         <p class="mb-0" style="color: rgba(255,255,255,0.7);">
-          © <span id="year"></span> Berktaş Seramik. Tüm hakları saklıdır.
+          © <span id="year"></span> Berktaş Yapı & Dekorasyon. Tüm hakları saklıdır.
         </p>
       </div>
     </div>
@@ -687,11 +694,3 @@
   <a href="https://wa.me/905397652896" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
