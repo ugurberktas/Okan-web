@@ -1,733 +1,380 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berktaş Yapı & Dekorasyon | Malatya Anahtar Teslim Tadilat</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123751">
+  <title>Malatya Anahtar Teslim Tadilat | Berktaş Yapı & Dekorasyon</title>
+  <meta name="description" content="Malatya ve çevre illerde anahtar teslim tadilat, boya, sıva, seramik ve parke uygulamaları. Ücretsiz keşif için Berktaş Yapı’dan Okan Usta’ya WhatsApp ile ulaşın.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Berktaş Yapı & Dekorasyon | Malatya’da Evinize Yeni Bir Başlangıç">
+  <meta property="og:description" content="Malatya ve çevre illerde anahtar teslim tadilat ve dekorasyon. Ücretsiz keşif için Berktaş Yapı’ya ulaşın.">
+  <meta property="og:site_name" content="Berktaş Yapı & Dekorasyon">
+  <!-- Canlı domain doğrulandığında canonical ve og:url ekleyin. Gerçek işletme görseli olmadan og:image eklemeyin. -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Berktaş Yapı & Dekorasyon",
+    "telephone": "+905397652896",
+    "description": "Anahtar teslim tadilat, seramik ve fayans, boya, sıva, alçı ve parke uygulamaları.",
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Malatya"},
+      {"@type": "AdministrativeArea", "name": "Elazığ"},
+      {"@type": "AdministrativeArea", "name": "Adıyaman"},
+      {"@type": "AdministrativeArea", "name": "Kahramanmaraş"}
+    ]
+  }
+  </script>
   <style>
-    /* --- KURUMSAL RENKLER VE TEMEL AYARLAR --- */
-    :root {
-      --primary-color: #003366; /* Kurumsal lacivert */
-      --light-bg: #f8f9fa;
-      --text-muted: #636e72;
-    }
+    :root { --navy:#123751; --navy-deep:#0b293e; --cream:#f7f5ef; --paper:#fffefa; --ink:#253e4b; --muted:#58666b; --line:#dedfd8; --green:#116346; --header-height:82px; }
+    *, *::before, *::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:var(--header-height); }
+    body { margin:0; min-height:100vh; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; -webkit-font-smoothing:antialiased; }
+    /* Bölüm hedeflerini yapışkan menünün altında, küçük bir nefes payıyla göster. */
+    main > section[id], #main { scroll-margin-top:16px; }
+    .container { width:100%; max-width:1200px; padding-inline:24px; margin-inline:auto; }
+    h1,h2,h3,p,figure { margin:0; }
+    h1,h2,h3 { color:var(--navy); font-weight:650; line-height:1.16; letter-spacing:-.04em; }
+    h1 { font-size:clamp(2.3rem,4.2vw,3.75rem); line-height:1.12; letter-spacing:-.035em; }
+    h2 { font-size:clamp(1.9rem,3.2vw,2.9rem); }
+    h3 { font-size:1.2rem; letter-spacing:-.025em; }
+    a { color:inherit; text-decoration:none; }
+    button,summary,a { -webkit-tap-highlight-color:transparent; }
+    a,button,summary { touch-action:manipulation; }
+    a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #bb661f; outline-offset:5px; border-radius:4px; }
+    .icon { width:22px; height:22px; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+    .icon-defs { position:absolute; width:0; height:0; overflow:hidden; }
+    .skip-link { position:fixed; top:10px; left:16px; transform:translateY(-160%); padding:12px 20px; background:white; color:var(--navy); z-index:50; }
+    .skip-link:focus { transform:translateY(0); }
+    .site-header { position:sticky; top:0; background:var(--paper); z-index:20; border-bottom:1px solid var(--line); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; min-height:82px; gap:20px; }
+    .brand { display:flex; gap:11px; align-items:center; flex-shrink:0; line-height:1.2; }
+    .brand-mark { display:grid; place-items:center; background:var(--navy); color:white; border-radius:11px 11px 3px 11px; width:43px; height:45px; }
+    .brand-mark .icon { width:28px; height:28px; }
+    .brand-name { display:block; font-size:1.06rem; font-weight:750; letter-spacing:.025em; color:var(--navy); }
+    .brand-subtitle { display:block; margin-top:5px; font-size:.64rem; letter-spacing:.19em; text-transform:uppercase; color:var(--muted); }
+    .nav-links { display:flex; align-items:center; gap:26px; }
+    .nav-links a { font-size:.9rem; font-weight:550; min-height:44px; display:flex; align-items:center; }
+    .nav-links a:hover { color:var(--green); }
+    .nav-links .nav-contact { padding:9px 17px; border:1px solid var(--line); border-radius:6px; }
+    .menu-toggle { display:none; align-items:center; justify-content:center; gap:7px; min-height:44px; padding:8px 10px; background:none; border:1px solid var(--line); border-radius:6px; color:var(--navy); font:inherit; font-size:.85rem; }
+    .eyebrow { display:flex; align-items:center; gap:8px; color:var(--green); font-size:.73rem; font-weight:700; text-transform:uppercase; letter-spacing:.13em; margin-bottom:20px; }
+    .eyebrow .icon { width:17px; height:17px; }
+    .hero { background:var(--cream); padding:52px 0 46px; }
+    .hero-layout { display:grid; grid-template-columns:1.07fr 1fr; gap:65px; align-items:center; }
+    .hero h1 span { color:var(--green); }
+    .hero-description { max-width:450px; color:var(--muted); font-size:1.05rem; margin-top:24px; }
+    .hero-actions { display:flex; flex-direction:column; align-items:flex-start; gap:14px; margin-top:30px; }
+    .button { min-height:52px; padding:14px 20px; display:inline-flex; justify-content:center; align-items:center; gap:10px; border-radius:7px; font-size:.92rem; font-weight:650; text-align:center; line-height:1.45; border:1px solid transparent; transition:background-color .15s,color .15s; }
+    .button-primary { color:white; background:var(--navy); }
+    .button-primary:hover { color:white; background:var(--navy-deep); }
+    .button-secondary { border-color:var(--line); color:var(--navy); background:transparent; }
+    .button-secondary:hover { background:#ecece4; }
+    .call-link { display:inline-flex; align-items:center; gap:9px; min-height:44px; font-size:.9rem; font-weight:600; }
+    .call-link span { color:var(--muted); font-size:.82rem; font-weight:400; }
+    .hero-note { border-top:1px solid var(--line); padding-top:18px; margin-top:23px; display:flex; gap:20px; font-size:.78rem; color:var(--muted); }
+    .hero-note span { display:flex; align-items:center; gap:7px; }
+    .hero-note .icon { color:var(--green); width:17px; height:17px; }
+    .hero-photo { position:relative; padding:0 0 14px 14px; }
+    .hero-photo::before { content:""; position:absolute; inset:20px 20px 0 0; background:#e7e6da; border-radius:70px 8px 8px 8px; }
+    .hero-photo img { display:block; position:relative; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; object-position:center bottom; border-radius:70px 8px 8px 8px; }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    .section { padding:76px 0; }
+    .section-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:32px; margin-bottom:32px; }
+    .section-heading .eyebrow { margin-bottom:12px; }
+    .section-intro { max-width:355px; color:var(--muted); font-size:.94rem; }
+    .services-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .service-card { border:1px solid var(--line); border-radius:10px; padding:25px 22px; background:white; }
+    .service-icon { width:43px; height:43px; color:var(--navy); background:var(--cream); display:grid; place-items:center; border-radius:9px; margin-bottom:25px; }
+    .service-card p { color:var(--muted); font-size:.87rem; margin-top:13px; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #333;
-      overflow-x: hidden;
-    }
 
-    h1, h2, h3 {
-      font-family: 'Inter', sans-serif;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
 
-    /* --- NAVBAR (ÜST MENÜ) --- */
-    .navbar {
-      background-color: rgba(255, 255, 255, 0.98) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      padding: 15px 0;
-    }
 
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--primary-color) !important;
-    }
 
-    .nav-link {
-      font-weight: 500;
-      color: #555 !important;
-      margin-left: 25px;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
 
-    .nav-link:hover {
-      color: var(--primary-color) !important;
-    }
 
-    /* --- HERO BÖLÜMÜ --- */
-    .hero-section {
-      position: relative;
-      height: 100vh;
-      min-height: 650px;
-      margin-top: 0;
-      background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    #gallery { padding-top:0; }
+    .gallery-grid { display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:20px; }
+    .gallery-card { min-width:0; }
+    .gallery-card img { display:block; width:100%; height:auto; aspect-ratio:4/3.5; object-fit:cover; border-radius:9px; background:var(--cream); }
+    .gallery-card:first-child img { aspect-ratio:5/3.5; }
+    .gallery-card figcaption { padding-top:16px; }
+    .gallery-card h3 { font-size:1.03rem; }
+    .gallery-card p { color:var(--muted); font-size:.83rem; margin-top:5px; }
 
-    .hero-content-box {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(12px) saturate(180%);
-      -webkit-backdrop-filter: blur(12px) saturate(180%);
-      padding: 60px 50px;
-      border-radius: 20px;
-      max-width: 750px;
-      text-align: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
 
-    .hero-title {
-      font-size: 3.2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
-    }
+    .areas { border-block:1px solid var(--line); background:var(--cream); }
+    .areas-layout { display:grid; grid-template-columns:1fr 1fr; gap:70px; }
+    .areas p { color:var(--muted); margin-top:18px; font-size:.94rem; }
+    .areas .eyebrow { color:var(--green); margin-top:0; font-size:.73rem; }
+    .region-tags { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:22px; }
+    .region-tags span { border:1px solid #d5d8cf; padding:7px 14px; border-radius:5px; background:var(--paper); font-size:.84rem; }
+    details { border-block-start:1px solid #cdd3ce; }
+    summary { padding:16px 4px; color:var(--navy); cursor:pointer; font-size:.89rem; font-weight:600; min-height:48px; }
+    .districts { display:flex; flex-wrap:wrap; gap:8px 16px; padding:0 4px 18px; list-style:none; margin:0; font-size:.82rem; color:var(--muted); }
+    .map-frame { display:block; width:100%; height:220px; border:0; border-radius:8px; background:#e7e6da; }
+    .map-note { padding-bottom:16px; font-size:.77rem !important; margin-top:9px !important; }
+    .contact-layout { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:70px; }
+    .contact-copy { color:var(--muted); margin-top:20px; max-width:425px; }
+    .contact-card { background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:30px; }
+    .person { display:flex; gap:14px; align-items:center; margin-bottom:25px; }
+    .person-icon { display:grid; place-items:center; width:48px; height:48px; border:1px solid #d4d8cd; background:var(--paper); border-radius:50%; }
+    .person strong { display:block; color:var(--navy); font-size:1.15rem; }
+    .person span { color:var(--muted); font-size:.81rem; }
+    .contact-card .button { display:flex; width:100%; margin-top:12px; }
+    .button-whatsapp { color:white; background:var(--green); }
+    .button-whatsapp:hover { background:#0b4d35; color:white; }
+    .phone-number { display:block; white-space:nowrap; font-size:.82rem; font-weight:500; }
+    .contact-hint { text-align:center; color:var(--muted); font-size:.76rem; margin-top:17px; }
+    .footer { padding:32px 0; border-top:1px solid var(--line); background:var(--cream); }
+    .footer-inner { display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--muted); font-size:.76rem; text-align:center; }
+    .footer-brand { color:var(--navy); font-size:.94rem; font-weight:650; }
+    .footer-since { display:block; color:var(--green); font-size:.8rem; font-weight:500; margin-top:4px; }
+    .footer a { display:inline-flex; align-items:center; min-height:44px; }
+    .footer p { align-self:center; }
+    .whatsapp-float { position:fixed; bottom:calc(18px + env(safe-area-inset-bottom)); right:max(20px, env(safe-area-inset-right)); width:56px; height:56px; display:grid; place-items:center; border-radius:50%; color:white; background:var(--green); box-shadow:0 3px 10px #12375118; z-index:35; }
+    .whatsapp-float:hover { color:white; background:#0b4d35; }
+    .whatsapp-float .icon { width:29px; height:29px; }
+    @media(max-width:991px) {
+      :root { --header-height:74px; }
+      .header-inner { min-height:74px; flex-wrap:wrap; gap:0; padding-block:15px; }
+      .menu-toggle { display:inline-flex; }
+      .nav-links { display:none; flex:0 0 100%; align-items:stretch; gap:0; padding:12px 0 18px; }
+      .nav-links.is-open { display:flex; flex-direction:column; }
+      .nav-links a { padding:10px 6px; min-height:46px; }
+      .nav-links .nav-contact { padding:10px 6px; border:0; }
+      .hero { padding:42px 0; }
+      .hero-layout { gap:30px; }
+      .hero h1 { font-size:clamp(2.3rem,5vw,3.5rem); }
+      .hero-photo img { aspect-ratio:3/4.4; }
+      .services-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 
-    .hero-subtitle {
-      font-size: 1.15rem;
-      color: #2c3e50;
-      margin-bottom: 35px;
-      font-weight: 400;
-      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
-    }
 
-    .btn-hero-primary {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 14px 40px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
-      border: 2px solid var(--primary-color);
-      display: inline-block;
+      .areas-layout,.contact-layout { gap:36px; }
+      .gallery-grid { gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .gallery-card:first-child img,.gallery-card img { aspect-ratio:3/4; }
     }
+    @media(max-width:767px) {
+      :root { --header-height:70px; }
+      .container { padding-inline:20px; }
+      .header-inner { min-height:70px; padding-block:13px; }
+      .brand-mark { width:35px; height:38px; border-radius:9px 9px 3px 9px; }
+      .brand-mark .icon { width:24px; height:24px; }
+      .brand { gap:8px; }
+      .brand-name { font-size:.87rem; }
+      .brand-subtitle { font-size:.54rem; letter-spacing:.16em; }
+      .menu-toggle { padding:8px; font-size:.75rem; gap:4px; }
+      .menu-toggle .icon { width:18px; }
+      .hero { padding:30px 0 34px; }
+      .hero-layout { grid-template-columns:1fr; gap:26px; }
+      .hero h1 { font-size:clamp(2.05rem,8.5vw,3.5rem); max-width:550px; line-height:1.16; }
+      .eyebrow { font-size:.67rem; margin-bottom:16px; letter-spacing:.1em; }
+      .hero-description { font-size:.94rem; margin-top:18px; }
+      .hero-actions { align-items:stretch; margin-top:23px; gap:8px; }
+      .button { font-size:.86rem; padding:13px 12px; }
+      .call-link { justify-content:center; font-size:.86rem; flex-wrap:wrap; gap:7px; }
+      .call-link span { font-size:.78rem; }
+      .hero-note { margin-top:17px; padding-top:16px; gap:14px; font-size:.7rem; }
+      .hero-note span { gap:5px; }
+      .hero-photo { padding:0 0 10px 10px; }
+      .hero-photo::before { inset:15px 15px 0 0; border-radius:40px 6px 6px 6px; }
+      .hero-photo img { aspect-ratio:auto; object-fit:contain; border-radius:24px 6px 6px 6px; }
 
-    .btn-hero-primary:hover {
-      background-color: #004d99;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3);
-    }
+      .section { padding:46px 0; }
+      .section-heading { flex-direction:column; align-items:flex-start; gap:15px; margin-bottom:24px; }
+      .section-intro { max-width:100%; font-size:.88rem; }
+      .services-grid { grid-template-columns:1fr; gap:12px; }
+      .service-card { display:grid; grid-template-columns:40px 1fr; gap:0 14px; padding:20px 16px; }
+      .service-icon { grid-row:1/3; margin:0; width:40px; height:40px; }
+      .service-card h3 { font-size:1.08rem; margin-top:2px; }
+      .service-card p { grid-column:2; margin-top:8px; font-size:.83rem; }
 
-    .btn-hero-secondary {
-      background-color: transparent;
-      color: var(--primary-color);
-      padding: 14px 40px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid var(--primary-color);
-      margin-left: 15px;
-      transition: all 0.3s;
-      display: inline-block;
-    }
 
-    .btn-hero-secondary:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
 
-    /* --- HİZMETLER BÖLÜMÜ (YENİ VE MODERN STİL) --- */
-    .section-padding { 
-      padding: 90px 0; 
-    }
 
-    .service-card-new {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      height: 100%;
-      border: 1px solid rgba(0,0,0,0.03);
-    }
+      .gallery-grid { grid-template-columns:1fr 1fr; gap:23px 14px; }
+      .gallery-card:first-child { grid-column:1/-1; }
+      .gallery-card:first-child img { aspect-ratio:16/10; }
+      .gallery-card img { aspect-ratio:1/1; }
+      .gallery-card figcaption { padding-top:11px; }
+      .gallery-card h3 { font-size:.95rem; }
+      .gallery-card p { font-size:.78rem; }
 
-    .service-card-new:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      .areas-layout,.contact-layout { grid-template-columns:1fr; gap:26px; }
+      .areas p { font-size:.88rem; margin-top:15px; }
+      .areas .eyebrow { font-size:.67rem; margin-top:0; }
+      .region-tags { margin-bottom:16px; }
+      .region-tags span { font-size:.79rem; padding:6px 11px; }
+      .map-frame { height:190px; }
+      .contact-copy { font-size:.92rem; margin-top:16px; }
+      .contact-card { padding:23px 18px; }
+      .person { margin-bottom:20px; }
+      .footer { padding:28px 0 calc(72px + env(safe-area-inset-bottom)); }
+      .whatsapp-float { width:50px; height:50px; right:max(12px, env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); }
+      .whatsapp-float .icon { width:26px; height:26px; }
     }
-
-    .service-image {
-      height: 220px;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
+    @media(prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { transition:none !important; animation:none !important; }
     }
-
-    .service-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .service-card-new:hover .service-image img {
-      transform: scale(1.1);
-    }
-
-    .service-content {
-      padding: 25px;
-      text-align: center;
-    }
-
-    .service-content h4 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 12px;
-    }
-
-    .service-content p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-
-    /* --- NEDEN BİZ --- */
-    .why-us-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, #004d99 100%);
-      color: white;
-    }
-
-    .why-us-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 30px 25px;
-      border-radius: 12px;
-      text-align: center;
-      transition: all 0.3s;
-      height: 100%;
-    }
-
-    .why-us-card:hover {
-      background: rgba(255, 255, 255, 0.15);
-      transform: translateY(-5px);
-    }
-
-    .why-us-icon {
-      font-size: 3rem;
-      color: #25D366;
-      margin-bottom: 15px;
-    }
-
-    .why-us-card h5 {
-      color: white;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .why-us-card p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    /* --- HİZMET ALANLARI --- */
-    .service-areas {
-      background-color: var(--light-bg);
-    }
-
-    .area-badge {
-      display: inline-block;
-      background: white;
-      color: var(--primary-color);
-      padding: 10px 20px;
-      border-radius: 25px;
-      margin: 8px;
-      font-weight: 500;
-      border: 2px solid #e0e0e0;
-      transition: all 0.3s;
-    }
-
-    .area-badge:hover {
-      background: var(--primary-color);
-      color: white;
-      border-color: var(--primary-color);
-      transform: scale(1.05);
-    }
-
-    .map-container {
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      height: 400px;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* --- GALERİ --- */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      height: 350px;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.08);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0, 51, 102, 0.85), transparent);
-      color: white;
-      padding: 20px;
-      transform: translateY(100%);
-      transition: transform 0.3s;
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
-    }
-
-    /* --- İLETİŞİM --- */
-    #contact {
-      background: linear-gradient(135deg, #003366 0%, #004d99 100%);
-      padding: 80px 0;
-    }
-
-    #contact h3 {
-      color: white;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-
-    #contact p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 1.1rem;
-    }
-
-    .cta-button {
-      padding: 18px 50px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s;
-      border: 2px solid transparent;
-    }
-
-    .btn-whatsapp {
-      background-color: #25D366;
-      color: white;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1da851;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-    }
-
-    .btn-call {
-      background-color: var(--primary-color);
-      color: white;
-      border-color: white;
-    }
-
-    .btn-call:hover {
-      background-color: white;
-      color: var(--primary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
-    }
-
-    /* Footer Alt Kısım */
-    .footer-bottom {
-      background-color: rgba(0, 0, 0, 0.2);
-      padding: 20px 0;
-      margin-top: 50px;
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: white;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    
-    .whatsapp-float:hover { 
-      transform: scale(1.12); 
-      color: white;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    }
-
-    /* Mobil Uyumluluk */
-    @media (max-width: 768px) {
-      .hero-title { font-size: 2.2rem; }
-      .hero-subtitle { font-size: 1rem; }
-      .hero-content-box { 
-        padding: 40px 25px; 
-        width: 92%; 
-        margin: 0 15px;
-      }
-      .btn-hero-secondary { 
-        margin-left: 0; 
-        margin-top: 15px; 
-        display: block; 
-        width: 100%; 
-      }
-      .btn-hero-primary { 
-        display: block; 
-        width: 100%; 
-      }
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-      .gallery-item {
-        height: 280px;
-      }
-      .cta-button {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      #contact h3 {
-        font-size: 1.8rem;
-      }
-      .map-container {
-        height: 300px;
-        margin-top: 30px;
-      }
-      .area-badge {
-        font-size: 0.85rem;
-        padding: 8px 15px;
-      }
-      .service-content h4 { font-size: 1.15rem; }
+    @media print {
+      body { height:auto; overflow:visible; }
+      .site-header { position:static; }
     }
   </style>
 </head>
-
 <body>
-
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-house-fill me-2"></i>BERKTAŞ YAPI
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#home">Anasayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Projeler</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section id="home" class="hero-section">
-    <div class="hero-content-box">
-      <h1 class="hero-title">Hayalinizdeki Evi<br>Baştan Yaratıyoruz</h1>
-      <p class="hero-subtitle">Boya, Parke, Seramik ve Alçıpan... Anahtar teslim tadilat ve dekorasyon çözümleri.</p>
-      
-      <div class="d-flex flex-wrap justify-content-center gap-2">
-        <a href="#contact" class="btn-hero-primary">
-          <i class="bi bi-calculator me-2"></i>Ücretsiz Keşif Al
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3c1 2 3 4 5 5l3-3 5 3c0 3-2 5-4 5C10 20 4 14 3 7c0-2 2-4 5-4Z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20.5 11.5a9 9 0 0 1-13.3 7.9L3 21l1.5-4.3a9 9 0 1 1 16-5.2Z"/><path d="m8 7 1.5 3-1 1c1 2 2 3 4 4l1.5-1 2.5 1c0 2-1 2.5-2.5 2-4-1-7-4-7.5-7C6.3 8.5 7 7 8 7Z"/></symbol>
+      <symbol id="i-tile" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></symbol>
+      <symbol id="i-paint" viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="6" rx="1"/><path d="M17 6h3v7h-8v3M10 16h4v6h-4z"/></symbol>
+      <symbol id="i-floor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 12h6M9 8h6M15 15h6"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+      <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+  <div class="site-viewport" id="siteViewport">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Berktaş Yapı ve Dekorasyon, ana sayfa">
+          <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+          <span><span class="brand-name">BERKTAŞ YAPI</span><span class="brand-subtitle">Yapı & Dekorasyon</span></span>
         </a>
-        <a href="tel:+905397652896" class="btn-hero-secondary">
-          <i class="bi bi-telephone me-2"></i>Hemen Ara
-        </a>
+        <button class="menu-toggle" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg> Menü
+        </button>
+        <nav class="nav-links" id="navbarNav" aria-label="Ana menü">
+          <a href="#home">Anasayfa</a>
+          <a href="#services">Hizmetler</a>
+          <a href="#gallery">İlham Galerisi</a>
+          <a href="#areas">Bölgeler</a>
+          <a class="nav-contact" href="#contact">Okan Usta’ya Ulaşın <span class="ms-2" aria-hidden="true">↗</span></a>
+        </nav>
       </div>
-    </div>
-  </section>
-
-  <section id="services" class="section-padding" style="background-color: var(--light-bg);">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Neler Yapıyoruz?</h2>
-        <p class="text-muted">Evinizin parkesinden boyasına, sıvasından fayansına kadar her şeyi tek elden yapıyoruz</p>
-      </div>
-      
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6">
-          <div class="service-card-new">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop&q=80" alt="Komple Tadilat">
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+          <div>
+            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Malatya ve çevre illerde</p>
+            <h1 id="hero-title">Malatya’da<br><span>anahtar teslim<br>tadilat & dekorasyon.</span></h1>
+            <p class="hero-description">Boyadan parkeye, seramikten alçıya; evinizi yenilemek için gereken işleri birlikte planlayalım.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://wa.me/905397652896?text=Merhaba%20Okan%20Bey%2C%20tadilat%20i%C3%A7in%20%C3%BCcretsiz%20ke%C5%9Fif%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp’tan Ücretsiz Keşif İste</a>
+              <a class="call-link" href="tel:+905397652896"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Hemen Ara <span>0539 765 28 96 · Okan Usta</span></a>
             </div>
-            <div class="service-content">
-              <h4>Komple Tadilat</h4>
-              <p>Anahtar teslim ev yenileme. Tüm işleri planlayıp, tertemiz teslim ediyoruz.</p>
-            </div>
+            <div class="hero-note"><span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Ücretsiz yerinde keşif</span><span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tek elden uygulama</span></div>
+          </div>
+          <!-- Fotoğraf: Tile Merchant Ireland / Unsplash, https://unsplash.com/photos/gAnUGqFdkX8; işletmenin işi değildir. -->
+          <figure class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1719321063859-c0da8f605031?auto=format&fit=crop&w=960&q=80" srcset="https://images.unsplash.com/photo-1719321063859-c0da8f605031?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1719321063859-c0da8f605031?auto=format&fit=crop&w=960&q=80 960w, https://images.unsplash.com/photo-1719321063859-c0da8f605031?auto=format&fit=crop&w=1440&q=80 1440w" sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1199px) 45vw, 520px" width="960" height="1439" fetchpriority="high" alt="Desenli yer fayansları ve beyaz duvar seramikleri bulunan temsili banyo dekorasyonu">
+          </figure>
+        </div>
+      </section>
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Hizmetlerimiz</p><h2 id="services-title">Evinizin her köşesi için.</h2></div><p class="section-intro">Tek bir odadan tüm eve, ihtiyacınıza uygun tadilat ve uygulama işleri.</p></div>
+          <div class="services-grid">
+            <article class="service-card"><div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></div><h3>Komple tadilat</h3><p>Anahtar teslim ev yenileme. İşleri birlikte planlayıp uygulama sürecini tek elden yürütüyoruz.</p></article>
+            <article class="service-card"><div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-tile"/></svg></div><h3>Seramik & fayans</h3><p>Banyo, mutfak ve ıslak zeminlerde seramik ve fayans döşeme uygulamaları.</p></article>
+            <article class="service-card"><div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-paint"/></svg></div><h3>Boya, sıva & alçı</h3><p>Boya badana, saten alçı, alçıpan ve duvar kâğıdıyla yaşam alanlarınızı yeniliyoruz.</p></article>
+            <article class="service-card"><div class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-floor"/></svg></div><h3>Zemin & parke</h3><p>Laminat parke döşeme ve süpürgelik montajıyla evinizin zeminini tamamlıyoruz.</p></article>
           </div>
         </div>
+      </section>
+      <section class="section" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">İlham galerisi</p><h2 id="gallery-title">Bir fikirle başlar.</h2></div><p class="section-intro">Renk, doku ve malzeme seçimlerinize ilham verebilecek örnek yaşam alanları.</p></div>
+          <!-- Gerçek iş fotoğrafları geldiğinde her figure içindeki src/srcset, alt ve açıklamayı birlikte güncelleyin. -->
+          <div class="gallery-grid">
+            <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=720&q=75" width="720" height="504" loading="lazy" decoding="async" alt="Açık renkler ve doğal dokular kullanılan örnek yaşam alanı"><figcaption><h3>Doğal tonlar</h3><p>Birbiriyle uyumlu duvar ve zeminler.</p></figcaption></figure>
+            <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=560&q=75" width="560" height="490" loading="lazy" decoding="async" alt="Seramik yüzeylere sahip örnek banyo dekorasyonu"><figcaption><h3>Sade banyolar</h3><p>Seramik ve doku fikirleri.</p></figcaption></figure>
+            <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=560&q=75" width="560" height="490" loading="lazy" decoding="async" alt="Yumuşak renklerle döşenmiş örnek yatak odası"><figcaption><h3>Sıcak odalar</h3><p>Dinlendirici renk birliktelikleri.</p></figcaption></figure>
+          </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="service-card-new">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop&q=80" alt="Seramik ve Fayans">
-            </div>
-            <div class="service-content">
-              <h4>Seramik & Fayans</h4>
-              <p>Banyo, mutfak ve ıslak zemin seramik döşeme. Profesyonel işçilik garantisi.</p>
-            </div>
+        </div>
+      </section>
+      <section class="section areas" id="areas" aria-labelledby="areas-title">
+        <div class="container areas-layout">
+          <div><p class="eyebrow">Hizmet bölgelerimiz</p><h2 id="areas-title">Malatya’da,<br>size yakın.</h2><p>Malatya merkez ve ilçelerinde; ayrıca Elazığ, Adıyaman ve Kahramanmaraş’ta hizmet veriyoruz.</p><p>İlçenizi ve yapılacak işi yazın, keşif için birlikte plan yapalım.</p></div>
+          <div><div class="region-tags" aria-label="Hizmet verilen iller"><span>Malatya</span><span>Elazığ</span><span>Adıyaman</span><span>Kahramanmaraş</span></div>
+            <details><summary>Malatya’da hizmet verdiğimiz ilçeler</summary><ul class="districts"><li>Merkez</li><li>Battalgazi</li><li>Yeşilyurt</li><li>Akçadağ</li><li>Arapgir</li><li>Arguvan</li><li>Darende</li><li>Doğanşehir</li><li>Doğanyol</li><li>Hekimhan</li><li>Kale</li><li>Kuluncak</li><li>Pütürge</li><li>Yazıhan</li></ul></details>
+            <details id="mapDetails"><summary>Hizmet bölgesini haritada gör</summary><iframe class="map-frame" title="Malatya hizmet bölgesi haritası" data-src="https://maps.google.com/maps?q=Malatya&t=&z=10&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><p class="map-note">Harita Malatya’yı gösterir; işletme adresi değildir. <a href="https://maps.google.com/maps?q=Malatya" target="_blank" rel="noopener noreferrer"><u>Google Haritalar’da aç</u></a></p></details>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="service-card-new">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop&q=80" alt="Boya ve Sıva">
-            </div>
-            <div class="service-content">
-              <h4>Boya & Sıva & Alçı</h4>
-              <p>Saten alçı, boya badana, duvar kağıdı. Evinize yeni bir soluk.</p>
-            </div>
+      </section>
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div><p class="eyebrow">Birlikte planlayalım</p><h2 id="contact-title">Aklınızdaki değişikliği<br>Okan Usta’ya anlatın.</h2><p class="contact-copy">Bir oda, bir banyo ya da tüm ev… Yapılacak işi ve bulunduğunuz ilçeyi WhatsApp’tan yazın. Ücretsiz keşif için görüşelim.</p></div>
+          <div class="contact-card">
+            <div class="person"><div class="person-icon"><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg></div><div><strong>Okan Usta</strong><span>Berktaş Yapı & Dekorasyon</span></div></div>
+            <a class="button button-whatsapp" href="https://wa.me/905397652896?text=Merhaba%20Okan%20Bey%2C%20tadilat%20i%C3%A7in%20%C3%BCcretsiz%20ke%C5%9Fif%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp’tan Ücretsiz Keşif İste</a>
+            <a class="button button-secondary" href="tel:+905397652896"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <span>Hemen Ara<span class="phone-number">0539 765 28 96</span></span></a>
+            <p class="contact-hint">Dilerseniz tadilat alanının fotoğrafını da paylaşabilirsiniz.</p>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="service-card-new">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&h=600&fit=crop&q=80" alt="Zemin ve Parke">
-            </div>
-            <div class="service-content">
-              <h4>Zemin & Parke</h4>
-              <p>Laminat parke döşeme, süpürgelik montajı. Kusursuz son kat işçiliği.</p>
-            </div>
-          </div>
-        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">Berktaş Yapı & Dekorasyon<span class="footer-since">2012’den beri</span></p>
+        <p>© <span id="year">2026</span> · Tüm hakları saklıdır.</p>
+        <a href="#home">Başa dön <span class="ms-2" aria-hidden="true">↑</span></a>
       </div>
-    </div>
-  </section>
-
-  <section class="why-us-section section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold text-white">Neden Berktaş Yapı?</h2>
-        <p class="text-white-50">Güvenilir, deneyimli ve anahtar teslim hizmet</p>
-      </div>
-      
-      <div class="row g-4">
-        <div class="col-md-3 col-sm-6">
-          <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-award-fill"></i></div>
-            <h5>15+ Yıllık Deneyim</h5>
-            <p>Uzman kadromuzla kusursuz işçilik</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-house-check"></i></div>
-            <h5>Anahtar Teslim</h5>
-            <p>Tüm süreçleri biz yönetiyoruz</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-cash-coin"></i></div>
-            <h5>Ücretsiz Keşif</h5>
-            <p>Yerinde ölçüm ve danışmanlık</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="why-us-card">
-            <div class="why-us-icon"><i class="bi bi-hand-thumbs-up"></i></div>
-            <h5>Temiz Teslimat</h5>
-            <p>İşimizin arkasında duruyoruz</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery" class="section-padding">
-    <div class="container">
-      <h2 class="text-center mb-3 fw-bold">Tamamladığımız Projeler</h2>
-      <p class="text-center text-muted mb-5">Hayallerdeki evleri gerçeğe dönüştürüyoruz</p>
-
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=650&fit=crop&q=80" alt="Modern Salon Parke ve Boya">
-          <div class="gallery-overlay">
-            <h5>Modern Salon Dekorasyonu</h5>
-            <p>Parke döşeme, boya ve aydınlatma</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1200&h=650&fit=crop&q=80" alt="Lüks Banyo Seramik">
-          <div class="gallery-overlay">
-            <h5>Lüks Banyo Yenileme</h5>
-            <p>Premium seramik ve modern tasarım</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200&h=650&fit=crop&q=80" alt="Koridor Zemin ve Boya">
-          <div class="gallery-overlay">
-            <h5>Şık Koridor Tasarımı</h5>
-            <p>Zemin ve duvar renk uyumu</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200&h=650&fit=crop&q=80" alt="Yatak Odası Dekorasyon">
-          <div class="gallery-overlay">
-            <h5>Huzurlu Yatak Odası</h5>
-            <p>Ahşap parke ve yumuşak tonlar</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=650&fit=crop&q=80" alt="Modern Mutfak Fayans">
-          <div class="gallery-overlay">
-            <h5>Modern Mutfak Uygulaması</h5>
-            <p>Metro fayans ve granit zemin</p>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=650&fit=crop&q=80" alt="Oturma Odası Tadilat">
-          <div class="gallery-overlay">
-            <h5>Komple Oturma Odası</h5>
-            <p>Anahtar teslim dönüşüm projesi</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-areas section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Hizmet Verdiğimiz Bölgeler</h2>
-        <p class="text-muted">Malatya ve çevre illerde anahtar teslim tadilat hizmeti</p>
-      </div>
-
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <div class="text-center mb-4">
-            <span class="area-badge">Merkez</span>
-            <span class="area-badge">Battalgazi</span>
-            <span class="area-badge">Yeşilyurt</span>
-            <span class="area-badge">Akçadağ</span>
-            <span class="area-badge">Arapgir</span>
-            <span class="area-badge">Arguvan</span>
-            <span class="area-badge">Darende</span>
-            <span class="area-badge">Doğanşehir</span>
-            <span class="area-badge">Doğanyol</span>
-            <span class="area-badge">Hekimhan</span>
-            <span class="area-badge">Kale</span>
-            <span class="area-badge">Kuluncak</span>
-            <span class="area-badge">Pütürge</span>
-            <span class="area-badge">Yazıhan</span>
-          </div>
-          <div class="alert alert-info border-0 shadow-sm">
-            <i class="bi bi-info-circle me-2"></i>
-            <strong>Çevre İller:</strong> Elazığ, Adıyaman, Kahramanmaraş bölgelerine de hizmet veriyoruz.
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="map-container">
-            <iframe 
-              src="https://maps.google.com/maps?q=Malatya&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container text-center">
-      <h3>Ücretsiz Keşif İçin İletişime Geçin</h3>
-      <p class="mb-5">Malatya'nın her yerine hizmet veriyoruz. Evinizi yenilemek için çekinmeden arayın.</p>
-      
-      <div class="row justify-content-center g-4">
-        <div class="col-lg-5 col-md-6">
-          <a href="https://wa.me/905397652896?text=Merhaba,%20ev%20tadilatı%20için%20bilgi%20almak%20istiyorum" 
-             target="_blank" 
-             class="cta-button btn-whatsapp w-100">
-            <i class="bi bi-whatsapp me-2"></i>WhatsApp'tan Yaz
-          </a>
-        </div>
-        <div class="col-lg-5 col-md-6">
-          <a href="tel:+905397652896" class="cta-button btn-call w-100">
-            <i class="bi bi-telephone-fill me-2"></i>Hemen Ara
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="mb-0" style="color: rgba(255,255,255,0.7);">
-          © <span id="year">2024</span> Berktaş Yapı & Dekorasyon. Tüm hakları saklıdır.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <a href="https://wa.me/905397652896" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+    </footer>
+  </div>
+  <a class="whatsapp-float" href="https://wa.me/905397652896?text=Merhaba%20Okan%20Bey%2C%20tadilat%20i%C3%A7in%20%C3%BCcretsiz%20ke%C5%9Fif%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp’tan Okan Usta’ya yazın, ücretsiz keşif isteyin"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
   <script>
-    // Yılı otomatik güncelle
     document.getElementById('year').textContent = new Date().getFullYear();
+    const menuButton = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('navbarNav');
+    const desktop = window.matchMedia('(min-width: 992px)');
+    function setMenu(open) {
+      menu.classList.toggle('is-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+    }
+    menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+    document.querySelector('.site-header').addEventListener('click', event => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      setMenu(false);
+      // Menü kapanınca odağı gizlenen bağlantıdan hedef bölümün başlığına taşı.
+      const target = document.querySelector(link.getAttribute('href'));
+      const heading = target?.querySelector('h1, h2');
+      if (heading) { heading.tabIndex = -1; heading.focus({preventScroll:true}); }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.site-header')) setMenu(false);
+    });
+    desktop.addEventListener('change', () => {
+      const focusWillHide = !desktop.matches && menu.contains(document.activeElement);
+      setMenu(false);
+      if (focusWillHide) menuButton.focus();
+    });
+    document.getElementById('mapDetails').addEventListener('toggle', event => {
+      const frame = event.currentTarget.querySelector('iframe');
+      if (event.currentTarget.open && !frame.hasAttribute('src')) frame.src = frame.dataset.src;
+    });
   </script>
 </body>
 </html>
